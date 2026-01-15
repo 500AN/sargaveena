@@ -8,27 +8,27 @@ const services = [
   {
     icon: Scissors,
     title: "Custom Costumes",
-    description: "Bespoke dance attire tailored to your exact specifications",
+    description: "Bespoke dance attire for any style—classical, contemporary, folk, or fusion",
   },
   {
     icon: Package,
     title: "Costume Rentals",
-    description: "Premium rental collection for performances and events",
+    description: "Premium rental collection for all dance performances and events",
   },
   {
     icon: Crown,
     title: "Ornaments",
-    description: "Authentic jewelry and headpieces for classical forms",
+    description: "Jewelry and accessories for every dance form and style",
   },
   {
     icon: Sparkles,
     title: "Stage Props",
-    description: "Performance-ready props crafted for impact",
+    description: "Performance-ready props for any production or recital",
   },
   {
     icon: Users,
     title: "Artist Consultation",
-    description: "Personalized guidance for your artistic vision",
+    description: "Personalized guidance for your unique artistic vision",
   },
 ]
 

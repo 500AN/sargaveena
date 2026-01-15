@@ -48,25 +48,25 @@ export function StorySection() {
 
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                Sargaveena was born from a deep, abiding love for the classical arts of India. What began as a personal
-                quest to find authentic, well-crafted dance costumes for a family member{"'"}s first arangetram evolved
-                into a mission to serve the entire artist community.
+                Sargaveena was born from a deep, abiding love for the performing arts. What began as a personal quest to
+                find authentic, well-crafted dance costumes for a family member{"'"}s first performance evolved into a
+                mission to serve the entire artist community—across all dance forms.
               </p>
               <p>
-                We witnessed firsthand the struggle artists faced in finding costumes that honored tradition while
-                meeting the demands of modern performance. Too often, they had to choose between authenticity and
-                comfort, between artistry and practicality.
+                We witnessed firsthand the struggle artists faced in finding costumes that matched their vision while
+                meeting the demands of modern performance. Whether it was a Bharatanatyam arangetram, a contemporary
+                dance competition, or a folk performance, dancers deserved better options.
               </p>
               <p>
-                This realization sparked the creation of Sargaveena—a sanctuary where tradition meets craftsmanship,
-                where every stitch tells a story, and where artists find costumes that elevate their art rather than
-                constrain it.
+                This realization sparked the creation of Sargaveena—a place where every dance style is celebrated, where
+                every stitch tells a story, and where artists find costumes that elevate their art, regardless of the
+                form they practice.
               </p>
             </div>
 
             <div className="mt-10 pt-10 border-t border-border">
               <p className="font-serif text-xl text-gold italic">
-                {'"'}From one artist{"'"}s need to every performer{"'"}s dream.{'"'}
+                {'"'}From one artist{"'"}s need to every performer{"'"}s dream—whatever the dance.{'"'}
               </p>
             </div>
           </div>

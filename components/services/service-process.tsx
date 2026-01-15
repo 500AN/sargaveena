@@ -63,40 +63,74 @@ export function ServiceProcess() {
           <div className="w-16 h-px bg-gold mx-auto mt-6" />
         </div>
 
-        {/* Process Steps */}
-        <div className="relative">
-          {/* Connection Line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border hidden lg:block" />
+        <div className="relative max-w-4xl mx-auto">
+          {/* Center Timeline Line */}
+          <div className="absolute left-4 lg:left-1/2 top-0 bottom-0 w-px bg-gold/30 lg:-translate-x-px" />
 
-          <div className="space-y-12 lg:space-y-0">
-            {steps.map((step, index) => (
-              <div
-                key={index}
-                className={`relative transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-                style={{ transitionDelay: `${200 + index * 100}ms` }}
-              >
+          <div className="space-y-12 lg:space-y-16">
+            {steps.map((step, index) => {
+              const isLeft = index % 2 === 0
+              return (
                 <div
-                  className={`lg:grid lg:grid-cols-2 lg:gap-16 items-center ${index % 2 === 1 ? "lg:text-right" : ""}`}
+                  key={index}
+                  className={`relative transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                  style={{ transitionDelay: `${200 + index * 100}ms` }}
                 >
-                  <div className={`${index % 2 === 1 ? "lg:order-2 lg:text-left" : ""}`}>
-                    <div
-                      className={`flex items-start gap-6 ${index % 2 === 1 ? "lg:flex-row-reverse lg:justify-end" : ""}`}
-                    >
-                      <div className="w-16 h-16 bg-cream border border-gold flex items-center justify-center flex-shrink-0">
-                        <span className="font-serif text-2xl text-gold">{step.number}</span>
+                  {/* Mobile Layout */}
+                  <div className="lg:hidden flex gap-6 pl-12">
+                    {/* Timeline Dot */}
+                    <div className="absolute left-4 top-0 w-2 h-2 bg-gold rounded-full -translate-x-1/2 mt-2" />
+
+                    <div className="bg-cream p-6 flex-1">
+                      <div className="flex items-center gap-4 mb-3">
+                        <span className="font-serif text-3xl text-gold">{step.number}</span>
+                        <h3 className="font-serif text-xl text-foreground">{step.title}</h3>
                       </div>
-                      <div className="pb-12 lg:pb-24">
-                        <h3 className="font-serif text-xl text-foreground mb-2">{step.title}</h3>
-                        <p className="text-muted-foreground">{step.description}</p>
-                      </div>
+                      <p className="text-muted-foreground">{step.description}</p>
+                    </div>
+                  </div>
+
+                  {/* Desktop Layout - Alternating Left/Right */}
+                  <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                    {/* Left Content */}
+                    <div className={`${isLeft ? "text-right pr-12" : "order-2 text-left pl-12"}`}>
+                      {isLeft ? (
+                        <div className="bg-cream p-8 inline-block text-left">
+                          <div className="flex items-center gap-4 mb-3">
+                            <span className="font-serif text-4xl text-gold">{step.number}</span>
+                            <h3 className="font-serif text-2xl text-foreground">{step.title}</h3>
+                          </div>
+                          <p className="text-muted-foreground max-w-sm">{step.description}</p>
+                        </div>
+                      ) : (
+                        <div className="h-full" />
+                      )}
+                    </div>
+
+                    {/* Right Content */}
+                    <div className={`${isLeft ? "order-2 pl-12" : "text-right pr-12"}`}>
+                      {!isLeft ? (
+                        <div className="bg-cream p-8 inline-block text-left">
+                          <div className="flex items-center gap-4 mb-3">
+                            <span className="font-serif text-4xl text-gold">{step.number}</span>
+                            <h3 className="font-serif text-2xl text-foreground">{step.title}</h3>
+                          </div>
+                          <p className="text-muted-foreground max-w-sm">{step.description}</p>
+                        </div>
+                      ) : (
+                        <div className="h-full" />
+                      )}
+                    </div>
+
+                    {/* Center Dot */}
+                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                      <div className="w-4 h-4 bg-gold rounded-full" />
+                      <div className="absolute inset-0 w-4 h-4 bg-gold rounded-full animate-ping opacity-30" />
                     </div>
                   </div>
                 </div>
-
-                {/* Center Dot */}
-                <div className="absolute left-1/2 top-8 w-3 h-3 bg-gold rounded-full -translate-x-1/2 hidden lg:block" />
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </div>

@@ -3,13 +3,22 @@
 import { useEffect, useRef, useState } from "react"
 
 const ornamentCategories = [
-  "Temple Jewelry Sets",
-  "Hair Ornaments (Rakodi, Jada)",
-  "Headpieces (Chandra, Surya)",
-  "Neck Pieces (Mango Mala, Lakshmi Haram)",
-  "Arm & Hand Jewelry",
-  "Waist Belts (Oddiyanam)",
-  "Ankle & Foot Ornaments",
+  {
+    category: "Classical",
+    items: ["Temple Jewelry Sets", "Hair Ornaments (Rakodi, Jada)", "Headpieces (Chandra, Surya)"],
+  },
+  {
+    category: "Traditional",
+    items: ["Neck Pieces (Mango Mala, Lakshmi Haram)", "Waist Belts (Oddiyanam)", "Ankle Ornaments"],
+  },
+  {
+    category: "Contemporary & Western",
+    items: ["Modern Statement Pieces", "Minimalist Dance Jewelry", "Stage Performance Accessories"],
+  },
+  {
+    category: "Folk & Fusion",
+    items: ["Tribal Jewelry Sets", "Oxidized Silver Collections", "Colorful Bead Ornaments"],
+  },
 ]
 
 export function OrnamentsJewelry() {
@@ -44,34 +53,51 @@ export function OrnamentsJewelry() {
             <span className="text-gold text-sm uppercase tracking-[0.3em] mb-4 block">Service 03</span>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">Ornaments & Jewelry</h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Complete your look with our authentic collection of classical dance ornaments. Each piece is crafted to
-              replicate traditional temple jewelry, designed for comfort during long performances while maintaining the
-              visual authenticity that classical dance demands.
+              Complete your look with our diverse collection of dance ornaments and jewelry. From authentic temple
+              jewelry for classical performances to contemporary statement pieces for modern choreography - we offer
+              jewelry for every dance style. Each piece is designed for comfort during long performances while ensuring
+              you shine on stage.
             </p>
 
-            <div className="space-y-3">
-              {ornamentCategories.map((category, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-gold rounded-full" />
-                  <span className="text-foreground">{category}</span>
+            <div className="space-y-6">
+              {ornamentCategories.map((group, groupIndex) => (
+                <div key={groupIndex}>
+                  <h4 className="text-gold font-medium text-sm uppercase tracking-wider mb-3">{group.category}</h4>
+                  <div className="space-y-2">
+                    {group.items.map((item, index) => (
+                      <div key={index} className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 bg-gold rounded-full" />
+                        <span className="text-foreground text-sm">{item}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Image Grid */}
           <div
             className={`grid grid-cols-2 gap-4 transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}
           >
             <img
-              src="/traditional-indian-dance-ornaments-including-temple-.jpg"
+              src="/traditional-indian-temple-jewelry-set-gold-necklac.jpg"
               alt="Temple jewelry set"
-              className="w-full aspect-square object-cover"
+              className="w-full aspect-[3/4] object-cover"
             />
             <img
-              src="/detailed-close-up-of-dance-jewelry-with-temple-moti.jpg"
-              alt="Dance ornament details"
-              className="w-full aspect-square object-cover mt-8"
+              src="/modern-contemporary-dance-jewelry-silver-statement.jpg"
+              alt="Contemporary dance jewelry"
+              className="w-full aspect-[3/4] object-cover mt-8"
+            />
+            <img
+              src="/colorful-folk-dance-jewelry-tribal-oxidized-silver.jpg"
+              alt="Folk dance ornaments"
+              className="w-full aspect-square object-cover -mt-4"
+            />
+            <img
+              src="/hair-ornaments-and-headpieces-for-dance-gold-rakod.jpg"
+              alt="Hair ornaments collection"
+              className="w-full aspect-square object-cover mt-4"
             />
           </div>
         </div>

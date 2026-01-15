@@ -34,32 +34,30 @@ export function PhilosophySection() {
             <div className="w-24 h-px bg-gold" />
           </div>
 
-          {/* Quote */}
           <blockquote
             className={`transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
             <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-relaxed mb-8">
-              {'"'}Every stitch carries the weight of tradition, every ornament reflects centuries of artistry, and
-              every costume tells a story of devotion to the classical arts.{'"'}
+              {'"'}Every stitch carries passion, every ornament reflects artistry, and every costume tells a story of
+              dedication to the performing arts—no matter the dance form.{'"'}
             </p>
           </blockquote>
 
-          {/* Philosophy Points */}
           <div
             className={`grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 transition-all duration-700 delay-400 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
             {[
               {
-                title: "Respect for Tradition",
-                description: "Honoring the sacred heritage of Indian classical dance forms",
+                title: "Every Style Welcome",
+                description: "From classical to contemporary, folk to fusion—we craft for every dance form",
               },
               {
                 title: "Precision Craftsmanship",
-                description: "Every detail meticulously crafted for authentic expression",
+                description: "Every detail meticulously crafted for authentic expression and comfort",
               },
               {
                 title: "Supporting Artists",
-                description: "Empowering performers with costumes that elevate their art",
+                description: "Empowering dancers with costumes that elevate their unique art",
               },
             ].map((item, index) => (
               <div key={index} className="text-center">

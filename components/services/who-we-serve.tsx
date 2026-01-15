@@ -1,28 +1,38 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { User, School, Building, Theater } from "lucide-react"
+import { User, School, Building, Theater, Music, Film } from "lucide-react"
 
 const clientTypes = [
   {
     icon: User,
     title: "Solo Artists",
-    description: "Individual performers preparing for recitals, arangetrams, or professional performances",
+    description: "Individual performers of any dance style preparing for recitals, competitions, or professional shows",
   },
   {
     icon: School,
     title: "Dance Schools",
-    description: "Academic institutions requiring costumes for students and annual performances",
+    description: "Academies teaching classical, contemporary, folk, Western, or mixed dance styles",
   },
   {
     icon: Building,
     title: "Cultural Institutions",
-    description: "Organizations hosting cultural events and classical dance programs",
+    description: "Organizations hosting cultural events, dance festivals, and community programs",
   },
   {
     icon: Theater,
     title: "Stage Productions",
-    description: "Theater companies and production houses creating dance-drama performances",
+    description: "Theater companies and production houses creating dance performances of any genre",
+  },
+  {
+    icon: Music,
+    title: "Music Videos & Albums",
+    description: "Artists and directors creating visual content with diverse dance choreography",
+  },
+  {
+    icon: Film,
+    title: "Film & TV",
+    description: "Production teams requiring costumes for dance sequences in movies and shows",
   },
 ]
 
@@ -59,8 +69,7 @@ export function WhoWeServe() {
           <div className="w-16 h-px bg-gold mx-auto mt-6" />
         </div>
 
-        {/* Client Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {clientTypes.map((client, index) => {
             const Icon = client.icon
             return (

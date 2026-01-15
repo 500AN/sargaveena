@@ -35,15 +35,26 @@ export function CostumeRentals() {
     <section ref={sectionRef} className="py-24 lg:py-32 bg-cream">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image */}
           <div
             className={`relative order-2 lg:order-1 transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}
           >
-            <img
-              src="/rack-of-colorful-classical-indian-dance-costumes-f.jpg"
-              alt="Dance costume rental collection"
-              className="w-full aspect-[4/5] object-cover"
-            />
+            <div className="grid grid-cols-2 gap-4">
+              <img
+                src="/rack-of-colorful-dance-costumes-for-rent-various-s.jpg"
+                alt="Dance costume rental collection"
+                className="w-full aspect-[3/4] object-cover col-span-2"
+              />
+              <img
+                src="/classical-bharatanatyam-costume-in-red-and-gold-on.jpg"
+                alt="Classical dance costume"
+                className="w-full aspect-square object-cover"
+              />
+              <img
+                src="/contemporary-dance-costume-in-flowing-fabric-moder.jpg"
+                alt="Contemporary dance costume"
+                className="w-full aspect-square object-cover"
+              />
+            </div>
             <div className="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-gold -z-10" />
           </div>
 
@@ -55,8 +66,8 @@ export function CostumeRentals() {
             <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">Costume Rentals</h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Access our extensive collection of premium dance costumes for your performances, exams, or special events.
-              Our rental service offers high-quality, well-maintained costumes across all classical dance forms, with
-              professional cleaning and fitting services included.
+              Our rental service offers high-quality, well-maintained costumes across all dance forms - classical,
+              contemporary, folk, Western, and fusion - with professional cleaning and fitting services included.
             </p>
 
             <div className="grid grid-cols-2 gap-6">

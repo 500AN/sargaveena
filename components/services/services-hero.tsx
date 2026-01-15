@@ -14,8 +14,8 @@ export function ServicesHero() {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src="/display-of-classical-indian-dance-costumes-and-orna.jpg"
-          alt="Classical Indian dance costumes display"
+          src="/display-of-diverse-dance-costumes-classical-contem.jpg"
+          alt="Display of diverse dance costumes"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-foreground/80" />
@@ -37,7 +37,7 @@ export function ServicesHero() {
           </h1>
 
           <p className="text-background/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Comprehensive solutions for every classical dance performance need—from custom costumes to stage props
+            Comprehensive solutions for every dance performance need—classical, folk, contemporary, Western, and beyond
           </p>
         </div>
       </div>

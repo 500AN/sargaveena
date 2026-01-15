@@ -64,15 +64,31 @@ export function CustomCostumes() {
             </div>
           </div>
 
-          {/* Image */}
           <div
             className={`relative transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}
           >
-            <img
-              src="/tailor-measuring-fabric-for-custom-bharatanatyam-c.jpg"
-              alt="Custom costume creation process"
-              className="w-full aspect-[4/5] object-cover"
-            />
+            <div className="grid grid-cols-2 gap-4">
+              <img
+                src="/tailor-hands-measuring-colorful-dance-costume-fabr.jpg"
+                alt="Measuring fabric for custom costume"
+                className="w-full aspect-[3/4] object-cover"
+              />
+              <img
+                src="/beautiful-finished-dance-costumes-hanging-on-rack-.jpg"
+                alt="Finished custom costumes"
+                className="w-full aspect-[3/4] object-cover mt-8"
+              />
+              <img
+                src="/close-up-of-intricate-embroidery-and-sequin-work-o.jpg"
+                alt="Embroidery details on costume"
+                className="w-full aspect-[3/4] object-cover -mt-8"
+              />
+              <img
+                src="/professional-sewing-machine-stitching-colorful-dan.jpg"
+                alt="Costume stitching in progress"
+                className="w-full aspect-[3/4] object-cover"
+              />
+            </div>
             <div className="absolute -bottom-6 -left-6 w-32 h-32 border-2 border-gold -z-10" />
           </div>
         </div>

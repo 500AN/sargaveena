@@ -15,7 +15,7 @@ export function AboutHero() {
       <div className="absolute inset-0">
         <img
           src="/artisan-hands-working-on-traditional-indian-dance-.jpg"
-          alt="Artisan crafting traditional dance costume"
+          alt="Artisan crafting dance costume"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-foreground/80" />
@@ -35,11 +35,11 @@ export function AboutHero() {
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-background leading-[1.1] mb-6">
             A Legacy of
             <br />
-            <span className="text-gold-gradient">Artistry & Tradition</span>
+            <span className="text-gold-gradient">Artistry & Passion</span>
           </h1>
 
           <p className="text-background/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Discover the passion, heritage, and dedication that drives every creation at Sargaveena
+            Discover the passion and dedication that drives every creation at Sargaveena
           </p>
         </div>
       </div>

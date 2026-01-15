@@ -5,28 +5,43 @@ import { useEffect, useRef, useState } from "react"
 const danceForms = [
   {
     name: "Bharatanatyam",
-    origin: "Tamil Nadu",
+    category: "Classical",
     image: "/bharatanatyam-dancer-in-traditional-costume-with-e.jpg",
   },
   {
     name: "Mohiniyattam",
-    origin: "Kerala",
+    category: "Classical",
     image: "/mohiniyattam-dancer-in-white-and-gold-costume--gra.jpg",
   },
   {
     name: "Kathakali",
-    origin: "Kerala",
+    category: "Classical",
     image: "/kathakali-performer-with-elaborate-green-face-make.jpg",
   },
   {
-    name: "Kuchipudi",
-    origin: "Andhra Pradesh",
-    image: "/kuchipudi-dancer-in-colorful-costume-performing-tr.jpg",
+    name: "Contemporary",
+    category: "Modern",
+    image: "/contemporary-dancer-in-flowing-costume-with-dramat.jpg",
   },
   {
-    name: "Kathak",
-    origin: "North India",
-    image: "/kathak-dancer-spinning-with-flowing-costume-and-an.jpg",
+    name: "Hip Hop",
+    category: "Western",
+    image: "/hip-hop-dancer-in-street-style-costume-with-urban-.jpg",
+  },
+  {
+    name: "Folk Dance",
+    category: "Traditional",
+    image: "/indian-folk-dancers-in-colorful-traditional-costum.jpg",
+  },
+  {
+    name: "Ballet",
+    category: "Western Classical",
+    image: "/ballet-dancer-in-elegant-tutu-and-pointe-shoes--gr.jpg",
+  },
+  {
+    name: "Fusion",
+    category: "Contemporary",
+    image: "/fusion-dance-performer-blending-eastern-and-wester.jpg",
   },
 ]
 
@@ -55,12 +70,14 @@ export function DanceFormsSection() {
   return (
     <section ref={sectionRef} className="py-24 lg:py-32 bg-foreground text-background overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
-        {/* Header */}
         <div
           className={`text-center mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <span className="text-gold text-sm uppercase tracking-[0.3em] mb-4 block">Celebrating Heritage</span>
+          <span className="text-gold text-sm uppercase tracking-[0.3em] mb-4 block">Celebrating All Styles</span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl">Dance Forms We Support</h2>
+          <p className="text-background/70 mt-4 max-w-2xl mx-auto">
+            From classical Indian to Western contemporary, folk traditions to modern fusion
+          </p>
           <div className="w-16 h-px bg-gold mx-auto mt-6" />
         </div>
       </div>
@@ -82,7 +99,7 @@ export function DanceFormsSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <h3 className="font-serif text-2xl text-background mb-1">{form.name}</h3>
-                <p className="text-gold text-sm uppercase tracking-wider">{form.origin}</p>
+                <p className="text-gold text-sm uppercase tracking-wider">{form.category}</p>
               </div>
             </div>
           </div>

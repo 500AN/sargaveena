@@ -16,11 +16,11 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/elegant-indian-classical-dancer-performing-bharata.jpg"
-          alt="Classical Indian dancer in traditional costume"
+          src="/elegant-dancer-in-beautiful-flowing-costume-perfor.jpg"
+          alt="Elegant dancer performing in beautiful costume"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-foreground/60 via-foreground/40 to-foreground/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-foreground/80" />
       </div>
 
       {/* Floating Gold Particles */}
@@ -52,19 +52,17 @@ export function HeroSection() {
             <div className="w-12 h-px bg-gold" />
           </div>
 
-          {/* Main Headline */}
           <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-background leading-[1.1] mb-6">
-            Where Tradition
+            Where Every Dance
             <br />
             <span className="text-gold-gradient">Takes Form</span>
           </h1>
 
-          {/* Subheadline */}
           <p className="text-background/80 text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-4 leading-relaxed">
-            Custom dance costumes, ornaments & stage props
+            Dance costumes, ornaments & stage props for every style
           </p>
           <p className="text-gold text-base md:text-lg italic mb-12">
-            Crafted with heritage. Perfected for performance.
+            Classical. Folk. Contemporary. Western. Fusion. And beyond.
           </p>
 
           {/* CTAs */}
