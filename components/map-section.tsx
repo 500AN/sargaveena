@@ -66,7 +66,7 @@ export function MapSection() {
                   <br />
                   Pipeline Road, Thrikkakara
                   <br />
-                  CUSAT PO, Kochi – 682033
+                  CUSAT PO, Kochi – 682022
                   <br />
                   Kerala, India
                 </p>
@@ -75,7 +75,7 @@ export function MapSection() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://www.google.com/maps/dir//Thrikkakara+Kochi+682033"
+                href="https://www.google.com/maps/dir//Sargaveena+Dance+Costumes,+1st+Floor,+Bharathi+Building,+Pipeline+Rd,+above+Citimart+Super+Market,+Maveli+Nagar,+Vidya+Nagar+Colony,+Thrikkakara,+Edappally,+Kochi,+Kerala+682022"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-foreground text-background font-medium uppercase tracking-wider hover:bg-gold transition-all duration-300"

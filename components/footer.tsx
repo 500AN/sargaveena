@@ -62,7 +62,7 @@ export function Footer() {
                   <br />
                   Pipeline Road, Thrikkakara
                   <br />
-                  Kochi – 682033
+                  Kochi – 682022
                 </span>
               </li>
               <li className="flex items-start gap-3 text-background/70">
@@ -70,7 +70,7 @@ export function Footer() {
                 <span>
                   Mon–Sat: 9:30 AM – 7:30 PM
                   <br />
-                  Sun: 9:30 AM – 12:00 PM
+                  Sun: 9:30 AM – 11:30 PM
                 </span>
               </li>
             </ul>

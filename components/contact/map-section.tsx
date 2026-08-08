@@ -33,7 +33,7 @@ export function MapSection() {
             className={`relative h-96 lg:h-[500px] transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.3!2d76.32!3d10.04!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDAyJzI0LjAiTiA3NsKwMTknMTIuMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.3!2d76.3259045!3d10.0351205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080db632ae5d2b:0xf90d588d6582f769!2sSargaveena%20Dance%20Costumes!5e0!3m2!1sen!2sin!4v1"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -66,7 +66,7 @@ export function MapSection() {
                   <br />
                   Pipeline Road, Thrikkakara
                   <br />
-                  CUSAT PO, Kochi – 682033
+                  CUSAT PO, Kochi – 682022
                   <br />
                   Kerala, India
                 </p>
@@ -75,7 +75,7 @@ export function MapSection() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://www.google.com/maps/dir//Thrikkakara+Kochi+682033"
+                href="https://www.google.com/maps/dir//Sargaveena+Dance+Costumes,+1st+Floor,+Bharathi+Building,+Pipeline+Rd,+above+Citimart+Super+Market,+Maveli+Nagar,+Vidya+Nagar+Colony,+Thrikkakara,+Edappally,+Kochi,+Kerala+682022"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-foreground text-background font-medium uppercase tracking-wider hover:bg-gold transition-all duration-300"

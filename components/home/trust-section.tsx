@@ -11,9 +11,11 @@ const trustPoints = [
   "Personalized service",
 ]
 
+// Add as many testimonials here as you like — they'll rotate two at a time.
 const testimonials = [
   {
-    quote: "Sargaveena's attention to detail transformed my performance. The costume moved with me like a second skin.",
+    quote:
+      "Sargaveena's attention to detail transformed my performance. The costume moved with me like a second skin.",
     author: "Lakshmi Menon",
     role: "Bharatanatyam Artist",
   },
@@ -23,11 +25,51 @@ const testimonials = [
     author: "Priya Nair",
     role: "Mohiniyattam Performer",
   },
+  {
+    quote:
+      "From the first fitting to the final stitch, the team understood exactly what my performance needed. Truly a partner, not just a tailor.",
+    author: "Anjali Warrier",
+    role: "Kuchipudi Dancer",
+  },
+  {
+    quote:
+      "The craftsmanship is unmatched. I have worn many costumes over the years, but nothing compares to the comfort and grace of theirs.",
+    author: "Meera Krishnan",
+    role: "Kathakali Performer",
+  },
+  {
+    quote:
+      "Sargaveena captured the essence of tradition while making sure I could move freely on stage. A rare balance to strike.",
+    author: "Divya Pillai",
+    role: "Odissi Dancer",
+  },
+  {
+    quote:
+      "Every ornament and drape felt like it was made just for me. The team's dedication to authenticity really shows.",
+    author: "Radhika Menon",
+    role: "Bharatanatyam Artist",
+  },
 ]
+
+const MAX_QUOTE_LENGTH = 140
+
+function truncateQuote(text: string, maxLength: number) {
+  if (text.length <= maxLength) return text
+  const trimmed = text.slice(0, maxLength)
+  const lastSpace = trimmed.lastIndexOf(" ")
+  return `${trimmed.slice(0, lastSpace > 0 ? lastSpace : maxLength)}…`
+}
+
+const ROTATE_INTERVAL_MS = 5000
+const PAIR_SIZE = 2
 
 export function TrustSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [pairIndex, setPairIndex] = useState(0)
+  const [fade, setFade] = useState(true)
+
+  const totalPairs = Math.ceil(testimonials.length / PAIR_SIZE)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -45,6 +87,23 @@ export function TrustSection() {
 
     return () => observer.disconnect()
   }, [])
+
+  useEffect(() => {
+    if (totalPairs <= 1) return
+
+    const interval = setInterval(() => {
+      setFade(false)
+      const timeout = setTimeout(() => {
+        setPairIndex((prev) => (prev + 1) % totalPairs)
+        setFade(true)
+      }, 300)
+      return () => clearTimeout(timeout)
+    }, ROTATE_INTERVAL_MS)
+
+    return () => clearInterval(interval)
+  }, [totalPairs])
+
+  const visibleTestimonials = testimonials.slice(pairIndex * PAIR_SIZE, pairIndex * PAIR_SIZE + PAIR_SIZE)
 
   return (
     <section ref={sectionRef} className="py-24 lg:py-32 bg-cream">
@@ -79,20 +138,47 @@ export function TrustSection() {
           <div
             className={`space-y-8 transition-all duration-700 delay-400 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="relative p-8 bg-background border border-border">
-                <Quote className="absolute top-6 right-6 w-8 h-8 text-gold/20" />
-                <p className="text-foreground leading-relaxed mb-6 italic">
-                  {'"'}
-                  {testimonial.quote}
-                  {'"'}
-                </p>
-                <div>
-                  <p className="font-serif text-gold">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+            <div className={`space-y-8 transition-opacity duration-300 ${fade ? "opacity-100" : "opacity-0"}`}>
+              {visibleTestimonials.map((testimonial, index) => (
+                <div
+                  key={`${pairIndex}-${index}`}
+                  className="relative p-8 bg-background border border-border min-h-[180px] flex flex-col justify-between"
+                >
+                  <Quote className="absolute top-6 right-6 w-8 h-8 text-gold/20" />
+                  <p className="text-foreground leading-relaxed mb-6 italic">
+                    {'"'}
+                    {truncateQuote(testimonial.quote, MAX_QUOTE_LENGTH)}
+                    {'"'}
+                  </p>
+                  <div>
+                    <p className="font-serif text-gold">{testimonial.author}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                  </div>
                 </div>
+              ))}
+            </div>
+
+            {/* Rotation indicator dots */}
+            {totalPairs > 1 && (
+              <div className="flex items-center justify-center gap-2 pt-2">
+                {Array.from({ length: totalPairs }).map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      setFade(false)
+                      setTimeout(() => {
+                        setPairIndex(index)
+                        setFade(true)
+                      }, 300)
+                    }}
+                    aria-label={`Show testimonials ${index + 1}`}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${
+                      index === pairIndex ? "w-6 bg-gold" : "w-1.5 bg-gold/20"
+                    }`}
+                  />
+                ))}
               </div>
-            ))}
+            )}
           </div>
         </div>
       </div>

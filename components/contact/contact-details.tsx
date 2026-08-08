@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from "react"
 import { Phone, MapPin, Clock, MessageCircle } from "lucide-react"
 
 const workingHours = [
-  { days: "Monday – Wednesday", hours: "9:30 AM – 7:30 PM" },
-  { days: "Thursday – Saturday", hours: "9:30 AM – 7:30 PM" },
-  { days: "Sunday", hours: "9:30 AM – 12:00 PM" },
+  { days: "Monday – Saturday", hours: "9:30 AM – 7:30 PM" },
+  // { days: "Thursday – Saturday", hours: "9:30 AM – 7:30 PM" },
+  { days: "Sunday", hours: "9:30 AM – 11:30 PM" },
 ]
 
 export function ContactDetails() {
@@ -92,7 +92,7 @@ export function ContactDetails() {
               <br />
               Pipeline Road, Thrikkakara
               <br />
-              CUSAT PO, Kochi – 682033
+              CUSAT PO, Kochi – 682022
             </p>
           </div>
 

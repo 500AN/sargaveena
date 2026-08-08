@@ -92,7 +92,7 @@ export function ContactDetails() {
               <br />
               Pipeline Road, Thrikkakara
               <br />
-              CUSAT PO, Kochi – 682033
+              CUSAT PO, Kochi – 682022
             </p>
           </div>
 

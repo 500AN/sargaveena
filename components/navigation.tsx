@@ -43,7 +43,6 @@ export function Navigation() {
           <div className="flex items-center justify-between h-20 lg:h-24">
             {/* Logo */}
             <Link href="/" className="relative z-10 flex items-center">
-
               <Image
                 src="/logo.png"
                 alt="Sargaveena"
@@ -52,7 +51,6 @@ export function Navigation() {
                 className="h-16 lg:h-20 w-auto object-contain"
                 priority
               />
-              
             </Link>
 
             {/* Desktop Navigation */}
@@ -63,7 +61,11 @@ export function Navigation() {
                   href={link.href}
                   className={cn(
                     "text-sm uppercase tracking-[0.2em] transition-colors duration-300",
-                    pathname === link.href ? "text-gold" : "text-foreground/80 hover:text-gold",
+                    pathname === link.href
+                      ? "text-gold"
+                      : scrolled
+                        ? "text-foreground/80 hover:text-gold"
+                        : "text-white hover:text-gold",
                   )}
                 >
                   {link.label}
@@ -75,7 +77,12 @@ export function Navigation() {
             <div className="hidden lg:flex items-center gap-4">
               <a
                 href="tel:9207271271"
-                className="flex items-center gap-2 px-6 py-3 bg-foreground text-background text-sm uppercase tracking-wider hover:bg-gold transition-colors duration-300"
+                className={cn(
+                  "flex items-center gap-2 px-6 py-3 text-sm uppercase tracking-wider transition-colors duration-300",
+                  scrolled
+                    ? "bg-foreground text-background hover:bg-gold"
+                    : "bg-white text-foreground hover:bg-gold",
+                )}
               >
                 <Phone className="w-4 h-4" />
                 Contact
@@ -89,7 +96,11 @@ export function Navigation() {
               aria-label="Toggle menu"
               aria-expanded={isOpen}
             >
-              {isOpen ? <X className="w-6 h-6 text-foreground" /> : <Menu className="w-6 h-6 text-foreground" />}
+              {isOpen ? (
+                <X className="w-6 h-6 text-foreground" />
+              ) : (
+                <Menu className={cn("w-6 h-6", scrolled ? "text-foreground" : "text-white")} />
+              )}
             </button>
           </div>
         </nav>

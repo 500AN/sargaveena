@@ -65,7 +65,7 @@ export function LocationSection() {
                     <br />
                     Pipeline Road, Thrikkakara
                     <br />
-                    CUSAT PO, Kochi – 682033
+                    CUSAT PO, Kochi – 682022
                   </p>
                 </div>
               </div>
@@ -76,9 +76,8 @@ export function LocationSection() {
                 <div>
                   <h3 className="font-serif text-lg text-foreground mb-2">Working Hours</h3>
                   <div className="text-muted-foreground space-y-1">
-                    <p>Monday – Wednesday: 9:30 AM – 7:30 PM</p>
-                    <p>Thursday – Saturday: 9:30 AM – 7:30 PM</p>
-                    <p>Sunday: 9:30 AM – 12:00 PM</p>
+                    <p>Monday – Saturday: 9:30 AM – 7:30 PM</p>
+                    <p>Sunday: 9:30 AM – 11:30 PM</p>
                   </div>
                 </div>
               </div>
