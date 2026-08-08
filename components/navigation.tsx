@@ -43,6 +43,7 @@ export function Navigation() {
           <div className="flex items-center justify-between h-20 lg:h-24">
             {/* Logo */}
             <Link href="/" className="relative z-10 flex items-center">
+
               <Image
                 src="/logo.png"
                 alt="Sargaveena"
@@ -51,6 +52,7 @@ export function Navigation() {
                 className="h-16 lg:h-20 w-auto object-contain"
                 priority
               />
+              
             </Link>
 
             {/* Desktop Navigation */}

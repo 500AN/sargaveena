@@ -9,6 +9,7 @@ import { TrustSection } from "@/components/home/trust-section"
 import { LocationSection } from "@/components/home/location-section"
 import { CtaSection } from "@/components/home/cta-section"
 
+
 export default function HomePage() {
   return (
     <main className="overflow-hidden">
